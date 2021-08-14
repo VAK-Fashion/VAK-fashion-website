@@ -1,0 +1,6 @@
+/frontend/node_modules
+/backend/include
+/backend/Lib
+/backend/Scripts
+/backend/pyvenv.cfg
+/frontend/package-lock.json
