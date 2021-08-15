@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../assets/logo.png";
+import Logo from "../assets/logo.jpg";
 import style from "../css/components/Nav.css";
 const Nav = () => {
   return (
@@ -10,9 +10,11 @@ const Nav = () => {
       <nav className={style.nav1}>
         <ul>
           <li>Home</li>
-          <li>PRODUCTS</li>
-          <li>BLOG</li>
-          <li>COUTACT</li>
+          <li>PRODUCTS</li>{" "}
+          {/*isko dropdown button bnale => nahi vo phone ma acha lag tha hai desktop ma nahi*/}
+          <li>BLOG</li>{" "}
+          {/*isme blog ki kya jrurt h?? => hai user ke complent blog ma aati hai*/}
+          <li>CONTACT</li>
         </ul>
         <span></span>
       </nav>

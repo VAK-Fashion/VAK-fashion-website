@@ -6,7 +6,7 @@
   justify-content: space-between;
   background-color: rgba(137, 137, 137, 0.408);
   overflow: hidden;
-  position: fixed;
+  position: absolute;
   top: 0px;
   z-index: 200;
   color: #fff;
@@ -25,6 +25,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .nav2 {
   width: 10%;
@@ -53,6 +54,19 @@
   height: 5px;
   width: 40px;
   background-color: gold;
-  top: 2px;
+  bottom: 31%;
   border-radius: 30px;
+  left: 38%;
+}
+.nav1 ul li:nth-child(1):hover ~ span {
+  left: 38%;
+}
+.nav1 ul li:nth-child(2):hover ~ span {
+  left: 45%;
+}
+.nav1 ul li:nth-child(3):hover ~ span {
+  left: 51.5%;
+}
+.nav1 ul li:nth-child(4):hover ~ span {
+  left: 57.5%;
 }
