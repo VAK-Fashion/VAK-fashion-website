@@ -47,10 +47,10 @@ module.exports = {
           },
         ],
       },
-      {
-        test: /\.(png)$/,
-        loader: 'url-loader'
-      }
+      // {
+      //   test: /\.(png)$/,
+      //   loader: 'url-loader'
+      // }
     ],
   },
 };

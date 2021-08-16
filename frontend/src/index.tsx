@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import Nav from "./components/Nav";
 import TopP from "./topprodect";
+import HotDeal from "./HotDeal";
 const Routes = () => {
   return (
     <>
@@ -25,6 +26,7 @@ const Routes = () => {
       <Nav />
       <App />
       <TopP />
+      <HotDeal />
     </>
   );
 };
