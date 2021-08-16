@@ -9,18 +9,18 @@ const HotDeal = () => {
     minutes: "",
     seconds: "",
   });
-  //   setInterval(() => {
-  //     const timeTillDate = "08 22 2021, 6:00 am";
-  //     const timeFormat = "MM DD YYYY, h:mm a";
-  //     const then: any = moment(timeTillDate, timeFormat);
-  //     const now: any = moment();
-  //     const countdown = moment(then - now);
-  //     const days = countdown.format("D");
-  //     const hours = countdown.format("HH");
-  //     const minutes = countdown.format("mm");
-  //     const seconds = countdown.format("ss");
-  //     setTime({ days, hours, minutes, seconds });
-  //   }, 1000);
+  setInterval(() => {
+    const timeTillDate = "08 22 2021, 6:00 am";
+    const timeFormat = "MM DD YYYY, h:mm a";
+    const then: any = moment(timeTillDate, timeFormat);
+    const now: any = moment();
+    const countdown = moment(then - now);
+    const days = countdown.format("D");
+    const hours = countdown.format("HH");
+    const minutes = countdown.format("mm");
+    const seconds = countdown.format("ss");
+    setTime({ days, hours, minutes, seconds });
+  }, 1000);
 
   //   console.log(time);
 
