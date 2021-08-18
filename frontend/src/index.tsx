@@ -11,6 +11,8 @@ import {
 import Nav from "./components/Nav";
 import TopP from "./topprodect";
 import HotDeal from "./HotDeal";
+import Blog from "./Blog";
+import Footer from "./Footer";
 const Routes = () => {
   return (
     <>
@@ -27,6 +29,8 @@ const Routes = () => {
       <App />
       <TopP />
       <HotDeal />
+      <Blog />
+      <Footer />
     </>
   );
 };

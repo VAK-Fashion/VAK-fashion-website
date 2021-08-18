@@ -5,3 +5,4 @@
 /backend/pyvenv.cfg
 /frontend/package-lock.json
 /core
+./*/node_modules
