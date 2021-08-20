@@ -6,7 +6,7 @@
   "scripts": {
     "webpack": "webpack",
     "serve": "webpack serve --stats-children",
-    "start": "webpack --mode  development  ./src/index.tsx --output-path ./build"
+    "start": "webpack --mode production  ./src/index.tsx --output-path ./build"
   },
   "keywords": [],
   "author": "",
