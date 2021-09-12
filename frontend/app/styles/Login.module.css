@@ -1,0 +1,119 @@
+.main {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  background-color: #fff;
+  border-radius: 10px;
+  /* padding: 2px; */
+  position: relative;
+  overflow: hidden;
+}
+.h {
+  width: 50%;
+
+  padding: 2% 5%;
+}
+.head {
+  text-align: start;
+}
+
+.span {
+  width: 100%;
+  height: 20px;
+  margin: 20px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #d2d1d8;
+}
+.span span {
+  width: 30%;
+  height: 2px;
+  background-color: #d2d1d8;
+}
+
+.google div {
+  width: 100%;
+  height: 10%;
+  margin: 20px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #d2d1d8;
+  border-radius: 30px;
+  padding: 10px;
+  cursor: pointer;
+}
+.google div i {
+  margin: 0px 10px;
+}
+.label {
+  font-size: 15px;
+  margin-left: 20px;
+}
+.input {
+  width: 96%;
+  height: 40px;
+  margin: 8px 0;
+  border: 2px solid #f0f0f0;
+  border-radius: 30px;
+  overflow: hidden;
+  padding: 0px 15px;
+}
+.input input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+}
+.checkbox p {
+  font-weight: bold;
+  font-size: 15px;
+}
+.forget {
+  font-weight: bold;
+  font-size: 15px;
+  color: #5236ef;
+}
+.submit button {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 40px;
+  background-color: #5236ef;
+  color: white;
+  border-radius: 30px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.sam {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 10px;
+}
+.sam a {
+  color: #5236ef;
+}
+.pt {
+  color: grey;
+  font-size: 10px;
+  position: absolute;
+  bottom: 2%;
+  margin-top: 20px;
+}
+.other {
+  margin: 20px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.checkbox {
+  display: flex;
+  align-items: center;
+}
+.checkbox input {
+  margin-right: 20px;
+}
+.checkbox p {
+  cursor: pointer;
+}
