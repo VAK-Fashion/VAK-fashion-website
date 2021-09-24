@@ -33,12 +33,12 @@ npm run dev
 ```
 
 **PS**
-```cmd
-cd backend/src/
-python ./manage.py runserver
+```ps1
+cd .\backend\src\
+python .\manage.py runserver
 ```
-```cmd
-cd frontend/app
+```ps1
+cd .\frontend\app
 
 npm i 
 
