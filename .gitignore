@@ -8,3 +8,4 @@
 /frontend/app/package-lock.json
 /core
 ./*/node_modules
+/node_modules

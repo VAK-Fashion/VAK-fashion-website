@@ -2,7 +2,7 @@ import React from "react";
 import style from "./style/Blog.module.css";
 const Blog = () => {
   return (
-    <div className={style.blog}>
+    <div className={style.blog} id="Blog">
       <header className={style.head}>
         <span></span>
         <div>

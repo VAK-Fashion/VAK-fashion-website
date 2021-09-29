@@ -1,4 +1,4 @@
-import { NextPage } from 'next'
+import Link from 'next/link'
 import React from 'react'
 import style from "./style/Nav.module.css";
 const Nav = ({ children }: any) => {
@@ -10,17 +10,30 @@ const Nav = ({ children }: any) => {
                 </div>
                 <nav className={style.nav1}>
                     <ul>
-                        <li>Home</li>
-                        <li>PRODUCTS</li>{" "}
-
-                        <li>BLOG</li>{" "}
                         <li>
+                            <a href="#home" >
+                                Home
+                            </a>
+                            </li>
+                        <li>
+                            <a href="#TopPro" >
+                            PRODUCTS
+                            </a>
+                        </li>{" "}
 
+                        <li>
+                            <a href="#Blog" >
+                            BLOG
+                            </a>
+                            </li>{" "}
+                        <li>
+                            <a href="#contact" >
                             CONTACT
+                            </a>
 
                         </li>
                     </ul>
-                    <span></span>
+                   
                 </nav>
                 <nav className={style.nav2}>
                     <ul>

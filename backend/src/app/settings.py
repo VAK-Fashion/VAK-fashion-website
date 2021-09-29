@@ -38,11 +38,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # api viwe
+    'colorfield',
     'corsheaders',
     'rest_framework',
     'rest_framework.authtoken',
     # my app
     "user",
+    "prodect",
+
 
 ]
 AUTH_USER_MODEL = 'user.Users'

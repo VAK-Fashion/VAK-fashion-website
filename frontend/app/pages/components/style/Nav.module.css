@@ -6,7 +6,7 @@
   justify-content: space-between;
   background-color: rgba(137, 137, 137, 0.408);
   overflow: hidden;
-  position: absolute;
+  position: fixed;
   top: 0px;
   z-index: 200;
   color: #fff;
@@ -42,6 +42,9 @@
   align-items: center;
   justify-content: center;
   padding: 20px;
+}
+.nav1 li a{
+  color: #fff;
 }
 .nav1 li,
 .nav2 li {

@@ -118,7 +118,7 @@ justify-content: center;
                         <div className={style.e}>
                             <h6 className={style.label}>Phone No*</h6>
                             <div className={style.input}>
-                                <input placeholder="8080754xx0" value={from.PhoneNumber} onChange={(e) => { e.target.value.length >= 15 ? alert("Your phone number is invalid") : setFrom({ ...from, PhoneNumber: e.target.value }) }} type="number" />
+                                <input placeholder="Phone Number" value={from.PhoneNumber} onChange={(e) => { e.target.value.length >= 15 ? alert("Your phone number is invalid") : setFrom({ ...from, PhoneNumber: e.target.value }) }}  type="tel" />
                             </div>
                         </div>
                         {err.PhoneNumber !== "" ? <p style={{ color: "tomato" }}>{err.PhoneNumber}</p> : ""}

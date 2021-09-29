@@ -1,9 +1,12 @@
 import React from "react";
 import ProdectCard from "./components/prodectCard";
 import style from "./style/topprodect.module.css";
+const topic: any[] = [
+  "female", "woman", "girls", "boy", "model", "fashion", "leggings", "workout", "ftv", "men", "male", ""
+]
 const TopP = () => {
   return (
-    <div className={style.topprodects}>
+    <div className={style.topprodects} id="TopPro">
       <div className={style.head}>
         <span className={style.rightBar}></span>
         <div className={style.infoHead}>
@@ -18,14 +21,14 @@ const TopP = () => {
         </div>
         <div className={style.p}>
           <div className={style.Card}>
-            <ProdectCard name="kurti" type="classic" price="&#8377;230" />
-            <ProdectCard name="legging" type="new" price="&#8377;145" />
-            <ProdectCard name="kurti" type="classic" price="&#8377;200" />
+            <ProdectCard name="kurti" image={[`https://source.unsplash.com/1600x900/?${topic[Math.floor(Math.random() * topic.length)]},${topic[Math.floor(Math.random() * topic.length)]}`,`https://source.unsplash.com/1600x900/?${topic[Math.floor(Math.random() * topic.length)]},${topic[Math.floor(Math.random() * topic.length)]}`,`https://source.unsplash.com/1600x900/?${topic[Math.floor(Math.random() * topic.length)]},${topic[Math.floor(Math.random() * topic.length)]}`]} type="classic" price="&#8377;230" />
+            <ProdectCard name="legging" image={[`https://source.unsplash.com/1600x900/?${topic[Math.floor(Math.random() * topic.length)]},${topic[Math.floor(Math.random() * topic.length)]}`,`https://source.unsplash.com/1600x900/?${topic[Math.floor(Math.random() * topic.length)]},${topic[Math.floor(Math.random() * topic.length)]}`,`https://source.unsplash.com/1600x900/?${topic[Math.floor(Math.random() * topic.length)]},${topic[Math.floor(Math.random() * topic.length)]}`]} type="new" price="&#8377;145" />
+            <ProdectCard name="kurti" image={[`https://source.unsplash.com/1600x900/?${topic[Math.floor(Math.random() * topic.length)]},${topic[Math.floor(Math.random() * topic.length)]}`,`https://source.unsplash.com/1600x900/?${topic[Math.floor(Math.random() * topic.length)]},${topic[Math.floor(Math.random() * topic.length)]}`,`https://source.unsplash.com/1600x900/?${topic[Math.floor(Math.random() * topic.length)]},${topic[Math.floor(Math.random() * topic.length)]}`]} type="classic" price="&#8377;200" />
           </div>
           <div className={style.Card}>
-            <ProdectCard name="legging" type="new" price="&#8377;150" />
-            <ProdectCard name="kurti" type="classic" price="&#8377;250" />
-            <ProdectCard name="legging" type="new" price="&#8377;135" />
+            <ProdectCard name="legging" image={[`https://source.unsplash.com/1600x900/?${topic[Math.floor(Math.random() * topic.length)]},${topic[Math.floor(Math.random() * topic.length)]}`,`https://source.unsplash.com/1600x900/?${topic[Math.floor(Math.random() * topic.length)]},${topic[Math.floor(Math.random() * topic.length)]}`,`https://source.unsplash.com/1600x900/?${topic[Math.floor(Math.random() * topic.length)]},${topic[Math.floor(Math.random() * topic.length)]}`]} type="new" price="&#8377;150" />
+            <ProdectCard name="kurti" image={[`https://source.unsplash.com/1600x900/?${topic[Math.floor(Math.random() * topic.length)]},${topic[Math.floor(Math.random() * topic.length)]}`,`https://source.unsplash.com/1600x900/?${topic[Math.floor(Math.random() * topic.length)]},${topic[Math.floor(Math.random() * topic.length)]}`,`https://source.unsplash.com/1600x900/?${topic[Math.floor(Math.random() * topic.length)]},${topic[Math.floor(Math.random() * topic.length)]}`]} type="classic" price="&#8377;250" />
+            <ProdectCard name="legging" image={[`https://source.unsplash.com/1600x900/?${topic[Math.floor(Math.random() * topic.length)]},${topic[Math.floor(Math.random() * topic.length)]}`,`https://source.unsplash.com/1600x900/?${topic[Math.floor(Math.random() * topic.length)]},${topic[Math.floor(Math.random() * topic.length)]}`,`https://source.unsplash.com/1600x900/?${topic[Math.floor(Math.random() * topic.length)]},${topic[Math.floor(Math.random() * topic.length)]}`]} type="new" price="&#8377;135" />
           </div>
         </div>
       </div>

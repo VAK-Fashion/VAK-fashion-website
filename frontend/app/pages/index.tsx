@@ -20,7 +20,7 @@ const Home: NextPage = () => {
       `,
           }}
         ></style>
-        <section className={style.Home}>
+        <section className={style.Home} id="home" >
           <div className={style.slide1}>
             <div className={style.Info}>
               <h2>Committed To Quality, Committed To You </h2>
@@ -39,7 +39,7 @@ const Home: NextPage = () => {
             </div>
           </div>
         </section>
-        <TopP />
+        <TopP  />
         <HotDeal />
         <Blog />
         <Footer />

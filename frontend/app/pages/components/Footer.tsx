@@ -1,17 +1,18 @@
 import React from "react";
 import style from "./style/Foot.module.css";
-import Img from "../1.jpg"
+import Img from "../../1.jpg"
+import Image from "next/image"
 const slides: Array<JSX.Element> = [
   <div className={style.slide1}>
-    {/* <img src="https://source.unsplash.com/user/erondu/1600x900" /> */}
+    <img src="https://source.unsplash.com/user/erondu/1600x900" />
     <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis architecto commodi ut ullam repudiandae ipsum cum, porro a velit, consectetur officiis natus repellat? Aperiam necessitatibus beatae esse porro veritatis quo."</p>
   </div>,
   <div className={style.slide1}>
-    {/* <img src="https://source.unsplash.com/user/HillshireFarm/1600x900" /> */}
+    <img src="https://source.unsplash.com/user/HillshireFarm/1600x900" />
     <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis architecto commodi ut ullam repudiandae ipsum cum, porro a velit, consectetur officiis natus repellat? Aperiam necessitatibus beatae esse porro veritatis quo."</p>
   </div>,
   <div className={style.slide1}>
-    {/* <img src="https://source.unsplash.com/user/Daniel/1600x900" /> */}
+    <img src="https://source.unsplash.com/user/Daniel/1600x900" />
     <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis architecto commodi ut ullam repudiandae ipsum cum, porro a velit, consectetur officiis natus repellat? Aperiam necessitatibus beatae esse porro veritatis quo."</p>
   </div>,
 ]
@@ -20,11 +21,14 @@ const Footer = () => {
   console.log(slide);
 
   return (
-    <div className={style.footer}>
+    <div className={style.footer} id="contact">
       <header className={style.head} >
 
         <div>
-          {/* <img src={Img} className={style.img} /> */}
+          <div className={style.img}>
+
+          <Image src={Img}  />
+          </div>
           <div style={{ zIndex: 20 }}>
             <h1>SUBSCRIBE EMAIL</h1>
             <p>Get latest news & update from VAF</p>
