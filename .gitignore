@@ -9,3 +9,9 @@
 /core
 ./*/node_modules
 /node_modules
+/vfk.zip
+/frontend/vfkwebsite/package-lock.json
+/frontend/vfkwebsite/package-lock.json
+/frontend/vfkwebsite/node_modules
+/template
+/frontend

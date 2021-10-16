@@ -100,7 +100,4 @@ const productview = () => {
         </div>
     )
 }
-//kisi pe = button tags pr click krne pr drop down hona chahiye ==== vo tu search ar ley = h try krta hu
-
-// in pr on click function lga de...........
 export default productview
