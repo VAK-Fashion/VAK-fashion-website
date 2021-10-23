@@ -1,0 +1,5 @@
+product page :- product-layout-2.html
+Home page :- index.html
+SHOP page :- shop-fullwidth.html
+cart page :- cart-variant2.html
+LookBook page :- lookbook1.html

@@ -15,3 +15,8 @@
 /frontend/vfkwebsite/node_modules
 /template
 /frontend
+/vfk
+/website/src/assets
+/website/node_modules
+/website/build
+/website/public

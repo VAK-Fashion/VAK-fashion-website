@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-%rh2h((jg+98w%&8-@^)bigumv&(ss!l0v12_&0m!)ayqmu06s'
+SECRET_KEY = 'django-insecure-=mph4%6(=$(w8l^=-9+su89vi(dq04dxpryy9f8opjw-q2ptw)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,22 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # api viwe
-    'colorfield',
-    'corsheaders',
-    'rest_framework',
-    'rest_framework.authtoken',
-    # my app
-    "user",
-    "prodect",
-
-
 ]
-AUTH_USER_MODEL = 'user.Users'
+
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',
-    "corsheaders.middleware.CorsPostCsrfMiddleware",
-    "django.middleware.common.CommonMiddleware",
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -61,7 +48,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-CORS_ORIGIN_ALLOW_ALL = True
+
 ROOT_URLCONF = 'app.urls'
 
 TEMPLATES = [
@@ -136,14 +123,3 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-# add by me
-REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework.authentication.TokenAuthentication',
-    ),
-    'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.IsAdminUser',
-        'rest_framework.permissions.IsAuthenticated'
-    ),
-
-}

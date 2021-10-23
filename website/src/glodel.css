@@ -1,0 +1,19 @@
+::-webkit-scrollbar {
+  display: none;
+}
+* {
+  moz-user-select: none;
+  -webkit-user-select: none;
+}
+img {
+  pointer-events: none;
+}
+.black {
+  background-color: #000 !important;
+}
+.colorWhite {
+  color: #fff !important;
+}
+.colorpink {
+  background-color: #f58f93 !important;
+}
