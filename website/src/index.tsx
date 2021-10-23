@@ -28,6 +28,7 @@ import contactUs from "./page/contactUs";
 import Product from "./page/ProductView";
 import Shop from "./page/Shop";
 import Checkout from "./page/Checkout";
+import register from "./Form/register"
 const Routes = () => {
     React.useEffect(() => {
         $("#site-scroll").on("click", function () {
@@ -55,6 +56,7 @@ const Routes = () => {
                 <Route exact path="/Shop" component={Shop} />
                 <Route exact path='/product/:id' component={Product} />
                 <Route exact path='/checkout' component={Checkout} />
+                <Route exact path='/register' component={register} />
                 <Route path="*" component={NotFound} />
             </Switch>
             <Footer />
