@@ -45,7 +45,7 @@ const Collection = () => {
             <Slider {...coll} className="collection-grid">
                 <div className="collection-grid-item">
                     <a href="collection-page.html" className="collection-grid-item__link">
-                        <img data-src={fashion} src={fashion} alt="Fashion" className="blur-up lazyload" />
+                        <img data-src='static/assets/images/collection/fashion.jpg' src='static/assets/images/collection/fashion.jpg' alt="Fashion" className="blur-up lazyload" />
                         <div className="collection-grid-item__title-wrapper">
                             <h3 className="collection-grid-item__title btn btn--secondary no-border">Fashion</h3>
                         </div>
@@ -53,7 +53,7 @@ const Collection = () => {
                 </div>
                 <div className="collection-grid-item">
                     <a href="collection-page.html" className="collection-grid-item__link">
-                        <img className="blur-up lazyload" data-src={cosmetic} src={cosmetic} alt="Cosmetic" />
+                        <img className="blur-up lazyload" data-src='static/assets/images/collection/cosmetic.jpg' src='static/assets/images/collection/cosmetic.jpg' alt="Cosmetic" />
                         <div className="collection-grid-item__title-wrapper">
                             <h3 className="collection-grid-item__title btn btn--secondary no-border">Cosmetic</h3>
                         </div>
@@ -61,7 +61,7 @@ const Collection = () => {
                 </div>
                 <div className="collection-grid-item blur-up lazyloaded">
                     <a href="collection-page.html" className="collection-grid-item__link">
-                        <img data-src={bag} src={bag} alt="Bag" className="blur-up lazyload" />
+                        <img data-src='static/assets/images/collection/bag.jpg' src='static/assets/images/collection/bag.jpg' alt="Bag" className="blur-up lazyload" />
                         <div className="collection-grid-item__title-wrapper">
                             <h3 className="collection-grid-item__title btn btn--secondary no-border">Bag</h3>
                         </div>
@@ -69,7 +69,7 @@ const Collection = () => {
                 </div>
                 <div className="collection-grid-item">
                     <a href="collection-page.html" className="collection-grid-item__link">
-                        <img data-src={accessories} src={accessories} alt="Accessories" className="blur-up lazyload" />
+                        <img data-src='static/assets/images/collection/accessories.jpg' src='static/assets/images/collection/accessories.jpg' alt="Accessories" className="blur-up lazyload" />
                         <div className="collection-grid-item__title-wrapper">
                             <h3 className="collection-grid-item__title btn btn--secondary no-border">Accessories</h3>
                         </div>
@@ -77,7 +77,7 @@ const Collection = () => {
                 </div>
                 <div className="collection-grid-item">
                     <a href="collection-page.html" className="collection-grid-item__link">
-                        <img data-src={shoes} src={shoes} alt="Shoes" className="blur-up lazyload" />
+                        <img data-src='static/assets/images/collection/shoes.jpg' src='static/assets/images/collection/shoes.jpg' alt="Shoes" className="blur-up lazyload" />
                         <div className="collection-grid-item__title-wrapper">
                             <h3 className="collection-grid-item__title btn btn--secondary no-border">Shoes</h3>
                         </div>
@@ -85,7 +85,7 @@ const Collection = () => {
                 </div>
                 <div className="collection-grid-item">
                     <a href="collection-page.html" className="collection-grid-item__link">
-                        <img data-src={jewellry} src={jewellry} alt="Jewellry" className="blur-up lazyload" />
+                        <img data-src='static/assets/images/collection/jewellry.jpg' src='static/assets/images/collection/jewellry.jpg' alt="Jewellry" className="blur-up lazyload" />
                         <div className="collection-grid-item__title-wrapper">
                             <h3 className="collection-grid-item__title btn btn--secondary no-border">Jewellry</h3>
                         </div>

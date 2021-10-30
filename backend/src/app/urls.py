@@ -15,9 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
+from django.urls.conf import re_path
+from .view import index
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
-    # path('api/user/', include('User.urls'))
+    path('api/user/', include('User.urls')),
+    path('', view=index),
+    path('login', view=index),
+    path('About', view=index),
+    path('wishlist', view=index),
+    path('contactUs', view=index),
+    path('product/<str:id>', view=index),
+    path('register', view=index),
+    path('cart', view=index),
+    path('Shop', view=index),
 ]

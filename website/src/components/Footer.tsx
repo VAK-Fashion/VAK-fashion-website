@@ -42,7 +42,7 @@ const Footer = () => {
                                 <Link to="/">T&C</Link>
                             </Col>
                             <Col md="6" sm="12" lg="6" className="col-12 order-0 order-md-1 order-lg-1 order-sm-0 payment-icons text-right text-md-center">
-                                <img src={pay} alt="Payment" />
+                                <img src='static/assets/images/safepayment.png' alt="Payment" />
                             </Col>
                         </Row>
                     </div>

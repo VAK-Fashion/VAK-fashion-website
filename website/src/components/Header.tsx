@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/images/logo.svg";
 
 import $ from "jquery";
+import { useSelector } from "react-redux";
 const Header = () => {
     const l = useLocation();
     const [open, setOpen] = React.useState(false);
@@ -59,32 +60,29 @@ const Header = () => {
                 $(this).parent().toggleClass("active");
             }
         });
+        $('.search-trigger').on('click', function () {
+            const search = $('.search');
+
+            if (search.is('.search--opened')) {
+                search.removeClass('search--opened');
+            } else {
+                search.addClass('search--opened');
+                $('.search__input')[0].focus();
+            }
+        });
     }, []);
+    const [q, setQ] = React.useState('')
+    const user = useSelector((s: any) => s.user)
     return (
         <>
-            <div className={`search ${open ? "search--opened " : ""}`}>
+            <div className="search">
                 <div className="search__form">
                     <form className="search-bar__form" action="#">
-                        <button className="go-btn search__button" type="submit">
-                            <i className="icon anm anm-search-l"></i>
-                        </button>
-                        <input
-                            className="search__input"
-                            type="search"
-                            name="q"
-                            value=""
-                            placeholder="Search entire store..."
-                            aria-label="Search"
-                            autoComplete="off"
-                        />
+                        <button className="go-btn search__button" type="submit"><i className="icon anm anm-search-l"></i></button>
+                        <input className="search__input" type="search" name="q" value={q} placeholder="Search entire store..."
+                            aria-label="Search" autoComplete="off" onChange={(e) => setQ(e.target.value)} />
                     </form>
-                    <button
-                        type="button"
-                        onClick={() => setOpen(false)}
-                        className="search-trigger close-btn"
-                    >
-                        <i className="anm anm-times-l"></i>
-                    </button>
+                    <button type="button" className="search-trigger close-btn"><i className="anm anm-times-l"></i></button>
                 </div>
             </div>
             <div className="top-header">
@@ -92,7 +90,7 @@ const Header = () => {
                     <div className="row">
                         <div className="col-10 col-sm-8 col-md-5 col-lg-4">
                             <p className="phone-no">
-                                <i className="anm anm-phone-s"></i> +91 8080754160
+                                <i className="anm anm-phone-s"></i> +91 xxxxxxxxx
                             </p>
                         </div>
                         <div className="col-sm-4 col-md-4 col-lg-4 d-none d-lg-none d-md-block d-lg-block">
@@ -109,10 +107,10 @@ const Header = () => {
                             </span>
                             <ul className="customer-links list-inline">
                                 <li>
-                                    <Link to="/login">Login</Link>
+                                    {JSON.stringify(user) === "{}" ? <Link to="/login">Login</Link> : <a href="#">{user.firstName}</a>}
                                 </li>
                                 <li>
-                                    <Link to="/register">Create Account</Link>
+                                    {JSON.stringify(user) === "{}" ? <Link to="/register">Create Account</Link> : null}
                                 </li>
                                 <li>
                                     <Link to="/wishlist">Wishlist</Link>

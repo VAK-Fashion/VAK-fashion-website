@@ -2,7 +2,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-=mph4%,dg6(=$(w8l^=-9+su89vi(dq04dxpryy9f8opjw-q2ptw)'
 DEBUG = True
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -32,7 +32,9 @@ ROOT_URLCONF = 'app.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'template'
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -76,16 +78,18 @@ USE_L10N = True
 
 USE_TZ = True
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+    '/var/www/static/',
+]
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # =============================================================================================$
 REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework.authentication.TokenAuthentication',
-    ),
     'DEFAULT_PERMISSION_CLASSES': (
-
-        'rest_framework.permissions.IsAdminUser',
         'rest_framework.permissions.IsAuthenticated',
-        'rest_framework.authentication.TokenAuthentication',
     ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
+    )
 }

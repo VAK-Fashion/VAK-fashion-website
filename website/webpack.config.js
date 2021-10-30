@@ -4,7 +4,7 @@ const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
 module.exports = {
   entry: "./src/index.tsx",
   output: {
-    path: path.join(__dirname, "build"),
+    path: "D:/business/VAK-fashion-website/backend/src/static",
     filename: "[name].bundle.js",
     publicPath: "/",
   },

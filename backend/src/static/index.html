@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en"
+  class="js sizes customelements history pointerevents postmessage webgl websockets cssanimations csscolumns csscolumns-width csscolumns-span csscolumns-fill csscolumns-gap csscolumns-rule csscolumns-rulecolor csscolumns-rulestyle csscolumns-rulewidth csscolumns-breakbefore csscolumns-breakafter csscolumns-breakinside flexbox picture srcset webworkers">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VFK</title>
+
+<script defer src="/main.bundle.js"></script></head>
+
+<body class="page-template home6-modern">
+  <div id="app" class="pageWrapper"></div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.js" crossorigin="anonymous"></script>
+<script>
+  window.onscroll = function () { myFunction() };
+  function myFunction() {
+    if ($(window).width() > 1199) {
+      if ($(window).scrollTop() > 145) {
+        $('.header-wrap').addClass("stickyNav animated fadeInDown");
+      } else {
+        $('.header-wrap').removeClass("stickyNav fadeInDown");
+      }
+    }
+  }
+  var selectors = {
+    body: 'body',
+    sitenav: '#siteNav',
+    navLinks: '#siteNav .lvl1 > a',
+    menuToggle: '.js-mobile-nav-toggle',
+    mobilenav: '.mobile-nav-wrapper',
+    menuLinks: '#MobileNav .anm',
+    closemenu: '.closemobileMenu'
+  };
+
+  $(selectors.navLinks).each(function () {
+    if ($(this).attr('href') == window.location.pathname) $(this).addClass('active');
+  })
+
+  $(selectors.menuToggle).on("click", function () {
+    body: 'body',
+      $(selectors.mobilenav).toggleClass("active");
+    $(selectors.body).toggleClass("menuOn");
+    $(selectors.menuToggle).toggleClass('mobile-nav--open mobile-nav--close');
+  });
+
+  $(selectors.closemenu).on("click", function () {
+    body: 'body',
+      $(selectors.mobilenav).toggleClass("active");
+    $(selectors.body).toggleClass("menuOn");
+    $(selectors.menuToggle).toggleClass('mobile-nav--open mobile-nav--close');
+  });
+  $("body").on('click', function (event) {
+    var $target = $(event.target);
+    if (!$target.parents().is(selectors.mobilenav) && !$target.parents().is(selectors.menuToggle) && !$target.is(selectors.menuToggle)) {
+      $(selectors.mobilenav).removeClass("active");
+      $(selectors.body).removeClass("menuOn");
+      $(selectors.menuToggle).removeClass('mobile-nav--close').addClass('mobile-nav--open');
+    }
+  });
+  $(selectors.menuLinks).on('click', function (e) {
+    e.preventDefault();
+    $(this).toggleClass('anm-plus-l anm-minus-l');
+    $(this).parent().next().slideToggle();
+  });
+</script>
+
+</html>

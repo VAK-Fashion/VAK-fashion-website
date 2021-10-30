@@ -17,11 +17,11 @@ const Bolg = () => {
                     {[{
                         date: 'May 02, 2017',
                         artical: 'I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account...',
-                        image: blog1
+                        image: 'static/assets/images/blog/post-img1.jpg'
                     }, {
                         date: 'May 02, 2017',
                         artical: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab...',
-                        image: blog2
+                        image: 'static/assets/images/blog/post-img2.jpg'
                     }].map((v, i) => (
                         <div className="col-12 col-sm-12 col-md-6 col-lg-6">
                             <div className="wrap-blog">

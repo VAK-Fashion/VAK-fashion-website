@@ -29,7 +29,7 @@ const App = () => {
                     {[
                         {
                             image: {
-                                src: belleBanner1,
+                                src: 'static/assets/images/slideshow-banners/belle-banner1.jpg',
                                 alt: "Shop Our New Collection",
                                 title: "Shop Our New Collection",
                             },
@@ -39,7 +39,7 @@ const App = () => {
                         },
                         {
                             image: {
-                                src: belleBanner2,
+                                src: 'static/assets/images/slideshow-banners/belle-banner2.jpg',
                                 alt: "Summer Bikini Collection",
                                 title: "Summer Bikini Collection",
                             },

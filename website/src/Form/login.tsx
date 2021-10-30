@@ -1,6 +1,36 @@
 import React from "react";
 import $ from "jquery";
+import { Link, useHistory } from "react-router-dom";
+import { Login, User } from "../api";
+import localforage from "localforage";
+import { user } from "../redux/actions"
+import { useDispatch } from "react-redux";
 const login = () => {
+    const [formdata, setData] = React.useState({
+        email: '',
+        password: ''
+    })
+    const dispatch = useDispatch()
+    const route = useHistory()
+    const [error, setError] = React.useState('')
+    const sub = (e: any) => {
+        e.preventDefault()
+        Login(formdata).then((e) => {
+
+            localforage.setItem('token', e.data.token).then(() => {
+                User(e.data.token).then((e) => {
+                    localforage.setItem('user', e[0])
+                    dispatch(user(e[0]))
+                    route.push('/shop')
+
+                })
+            })
+        }).catch((ee) => {
+
+
+            setError(JSON.stringify(ee))
+        })
+    }
     React.useEffect(() => {
         $("classicHeader").removeClass("classicHeader");
     }, []);
@@ -9,7 +39,7 @@ const login = () => {
             <div className="page section-header text-center">
                 <div className="page-title">
                     <div className="wrapper">
-                        <h1 className="page-width">Login</h1>
+                        {error ? <h1 style={{ color: '#e35d6a' }} className="page-width red">Your Email and Password is not valid</h1> : <h1 className="page-width">Login</h1>}
                     </div>
                 </div>
             </div>
@@ -19,7 +49,7 @@ const login = () => {
                     <div className="col-12 col-sm-12 col-md-6 col-lg-6 main-col offset-md-3">
                         <div className="mb-4">
                             <form
-                                method="post"
+                                onSubmit={sub}
                                 action="#"
                                 id="CustomerLoginForm"
                                 accept-charset="UTF-8"
@@ -39,6 +69,11 @@ const login = () => {
                                                 autoCorrect="off"
                                                 autoCapitalize="off"
                                                 autoFocus
+                                                value={formdata.email}
+                                                onChange={(e) => {
+                                                    setError('')
+                                                    setData({ ...formdata, email: e.target.value })
+                                                }}
                                             />
                                         </div>
                                     </div>
@@ -47,11 +82,12 @@ const login = () => {
                                             <label htmlFor="CustomerPassword">Password</label>
                                             <input
                                                 type="password"
-                                                value=""
+
                                                 name="customer[password]"
                                                 placeholder=""
                                                 id="CustomerPassword"
-                                                className=""
+                                                value={formdata.password}
+                                                onChange={(e) => setData({ ...formdata, password: e.target.value })}
                                             />
                                         </div>
                                     </div>
@@ -64,9 +100,9 @@ const login = () => {
                                                 Forgot your password?
                                             </a>{" "}
                                             &nbsp; | &nbsp;
-                                            <a href="register.html" id="customer_register_link">
+                                            <Link to="register" id="customer_register_link">
                                                 Create account
-                                            </a>
+                                            </Link>
                                         </p>
                                     </div>
                                 </div>

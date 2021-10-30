@@ -1,6 +1,13 @@
 import React from "react";
+import { SignUp } from "../api";
 
 const register = () => {
+  const [fomdata, setForm] = React.useState({
+    firstName: '',
+    LastName: '',
+    email: '',
+    password: '',
+  })
   return (
     <div>
       <div id="page-content">
@@ -17,8 +24,7 @@ const register = () => {
             <div className="col-12 col-sm-12 col-md-6 col-lg-6 main-col offset-md-3">
               <div className="mb-4">
                 <form
-                  method="post"
-                  action="#"
+                  onSubmit={(e) => { e.preventDefault(); SignUp(fomdata) }}
                   id="CustomerLoginForm"
                   accept-charset="UTF-8"
                   className="contact-form"
@@ -33,6 +39,8 @@ const register = () => {
                           placeholder=""
                           id="FirstName"
                           autoFocus
+                          value={fomdata.firstName}
+                          onChange={(e) => setForm({ ...fomdata, firstName: e.target.value })}
                         />
                       </div>
                     </div>
@@ -44,6 +52,8 @@ const register = () => {
                           name="customer[last_name]"
                           placeholder=""
                           id="LastName"
+                          value={fomdata.LastName}
+                          onChange={(e) => setForm({ ...fomdata, LastName: e.target.value })}
                         />
                       </div>
                     </div>
@@ -59,6 +69,8 @@ const register = () => {
                           autoCorrect="off"
                           autoCapitalize="off"
                           autoFocus
+                          value={fomdata.email}
+                          onChange={(e) => setForm({ ...fomdata, email: e.target.value })}
                         />
                       </div>
                     </div>
@@ -67,11 +79,12 @@ const register = () => {
                         <label htmlFor="CustomerPassword">Password</label>
                         <input
                           type="password"
-                          value=""
+
                           name="customer[password]"
                           placeholder=""
                           id="CustomerPassword"
-                          className=""
+                          value={fomdata.password}
+                          onChange={(e) => setForm({ ...fomdata, password: e.target.value })}
                         />
                       </div>
                     </div>

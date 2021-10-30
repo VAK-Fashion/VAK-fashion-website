@@ -1,4 +1,5 @@
 import React from "react";
+import { Provider } from "react-redux";
 import ReactDOM from "react-dom";
 import "bootstrap/dist/js/bootstrap.min.js";
 import "./glodel.css";
@@ -13,7 +14,6 @@ import "lazysizes";
 import "lazysizes/plugins/parent-fit/ls.parent-fit";
 import "wow.js/css/libs/animate.css";
 import "wow.js/dist/wow.min.js";
-
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Footer from "./components/Footer";
 import login from "./Form/login";
@@ -28,7 +28,12 @@ import contactUs from "./page/contactUs";
 import Product from "./page/ProductView";
 import Shop from "./page/Shop";
 import Checkout from "./page/Checkout";
-import register from "./Form/register"
+import register from "./Form/register";
+import cart from "./page/cart";
+import localforage from 'localforage'
+import store, { persistor } from "./redux/store";
+import { PersistGate } from "redux-persist/integration/react";
+
 const Routes = () => {
     React.useEffect(() => {
         $("#site-scroll").on("click", function () {
@@ -36,14 +41,14 @@ const Routes = () => {
             return false;
         });
         $(window).scroll(function (e) {
-            var kk: any = $(window).scrollTop()
+            var kk: any = $(window).scrollTop();
             if (kk > 300) {
                 $("#site-scroll").fadeIn();
             } else {
                 $("#site-scroll").fadeOut();
             }
         });
-    }, [])
+    }, []);
     return (
         <Router>
             <Header />
@@ -54,17 +59,24 @@ const Routes = () => {
                 <Route exact path="/wishlist" component={Wishlist} />
                 <Route exact path="/contactUs" component={contactUs} />
                 <Route exact path="/Shop" component={Shop} />
-                <Route exact path='/product/:id' component={Product} />
-                <Route exact path='/checkout' component={Checkout} />
-                <Route exact path='/register' component={register} />
+                <Route exact path="/product/:id" component={Product} />
+                <Route exact path="/checkout" component={Checkout} />
+                <Route exact path="/register" component={register} />
+                <Route exact path="/cart" component={cart} />
                 <Route path="*" component={NotFound} />
             </Switch>
             <Footer />
-            <span id="site-scroll" className="colorpink"  ><i className="icon anm anm-angle-up-r"></i></span>
+            <span id="site-scroll" className="colorpink">
+                <i className="icon anm anm-angle-up-r"></i>
+            </span>
         </Router>
-    )
-}
+    );
+};
 ReactDOM.render(
-    <Routes />,
-    document.getElementById("app")
-);
+    <Provider store={store}>
+        <PersistGate loading={null} persistor={persistor}>
+            <Routes />
+        </PersistGate>
+    </Provider>
+
+    , document.getElementById("app"));

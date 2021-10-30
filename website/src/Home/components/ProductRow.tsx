@@ -29,8 +29,8 @@ const ProductRow = () => {
                     <div className="row">
                         {[
                             {
-                                image1: productImage1,
-                                image2: productImage11,
+                                image1: 'static/assets/images/product-images/product-image1.jpg',
+                                image2: 'static/assets/images/product-images/product-image1-1.jpg',
                                 onSale: {
                                     is: true,
                                     label: "new",
@@ -47,8 +47,8 @@ const ProductRow = () => {
 
                             },
                             {
-                                image1: productImage2,
-                                image2: productImage21,
+                                image1: 'static/assets/images/product-images/product-image2.jpg',
+                                image2: 'static/assets/images/product-images/product-image2-1.jpg',
                                 onSale: {
                                     is: false,
                                     label: "new",
@@ -62,8 +62,8 @@ const ProductRow = () => {
                                 },
                             },
                             {
-                                image1: productImage3,
-                                image2: productImage31,
+                                image1: 'static/assets/images/product-images/product-image3.jpg',
+                                image2: 'static/assets/images/product-images/product-image3-1.jpg',
                                 onSale: {
                                     is: true,
                                     label: "Sale",
@@ -78,8 +78,8 @@ const ProductRow = () => {
 
                             },
                             {
-                                image1: productImage4,
-                                image2: productImage41,
+                                image1: 'static/assets/images/product-images/product-image4.jpg',
+                                image2: 'static/assets/images/product-images/product-image4-1.jpg',
                                 onSale: {
                                     is: true,
                                     label: "Hot",
@@ -96,8 +96,8 @@ const ProductRow = () => {
 
                             },
                             {
-                                image1: productImage5,
-                                image2: productImage51,
+                                image1: 'static/assets/images/product-images/product-image5.jpg',
+                                image2: 'static/assets/images/product-images/product-image5-1.jpg',
                                 onSale: {
                                     is: false,
                                     label: "Hot",
@@ -112,8 +112,8 @@ const ProductRow = () => {
 
                             },
                             {
-                                image1: productImage6,
-                                image2: productImage61,
+                                image1: 'static/assets/images/product-images/product-image6.jpg',
+                                image2: 'static/assets/images/product-images/product-image6-1.jpg',
                                 onSale: {
                                     is: false,
                                     label: "Hot",

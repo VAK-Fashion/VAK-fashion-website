@@ -1,10 +1,18 @@
 import React from "react";
-import { Button, Col, Container, Row, Table } from "react-bootstrap";
+import { Col, Container, Row, Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import img1 from "../assets/images/product-images/product-image8.jpg";
 import img2 from "../assets/images/product-images/product-image4.jpg";
 import img3 from "../assets/images/product-images/product-image5.jpg";
+import { useSelector } from "react-redux";
+import { useHistory } from "react-router-dom"
 const Wishlist = () => {
+    const user = useSelector((s: any) => s.user)
+    const route = useHistory()
+    if (JSON.stringify(user) === "{}") {
+        route.push('/login')
+    }
+
     return (
         <div id="page-content">
             <div className="page section-header text-center">
